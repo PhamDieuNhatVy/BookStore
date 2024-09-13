@@ -1,0 +1,104 @@
+﻿@model IEnumerable<DoAnPTTKHDT.Models.NGUOIDUNG>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container">
+            <h2 style="text-align:center;">QUẢN LÝ THÔNG TIN KHÁCH HÀNG</h2>
+
+            <table class="table">
+                <tr>
+                    <th>
+                       Họ và tên
+                    </th>
+                    <th>
+                   Địa chỉ
+                    </th>
+                    <th>
+                     Số điện thoại
+                    </th>
+                    <th>
+                       Tên đăng nhập
+                    </th>
+                    <th>
+                       Mật khẩu
+                    </th>
+                    <th>
+                      Ngày sinh
+                    </th>
+                    <th>
+                       Giới tính
+                    </th>
+                    <th>
+                       Email
+                    </th>
+                 
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.HoTenKH)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DiaChiKH)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DienThoaiKH)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TenDN)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MatKhau)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NgaySinh)
+                        </td>
+                        <td>
+                            @item.GioiTinh
+                            @*@if (@item.GioiTinh == true)
+            {
+                @Html.Encode("Nam")
+            }
+            else if (@item.GioiTinh == false)
+            {
+
+
+                @Html.Encode("Nữ")
+            }*@
+
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+
+                        <td>
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Edit", new { id = item.MaKH })" class="btn btn-warning" role="button">Sửa</a>
+
+
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Details",new {id=item.MaKH})" class="btn btn-success" role="button">Xem</a>
+
+                        </td>
+                        <td>
+
+                            <a href="@Url.Action("Delete", new { id = item.MaKH })" class="btn btn-danger" role="button">Xóa</a>
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<DoAnPTTKHDT.Models.CHUDE>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container">
+            <h2 style="text-align:center;">THÊM MỚI CHỦ ĐỀ</h2>
+            <p>
+                @Html.ActionLink("Thêm mới", "Create", null, new { @class = "btn btn-primary" })
+            </p>
+            <table class="table" style="width:50%;">
+                <tr>
+                    <th style="text-align:center;width:140px">
+                        <h3>
+                            Tên chủ đề
+                        </h3>
+                    </th>
+
+                </tr>
+
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TenChuDe)
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
+
+                        <td>
+                            <a href="@Url.Action("Edit", new { id = item.MaCD })" class="btn btn-warning" role="button">Sửa</a>
+
+                            <a href="@Url.Action("Delete", new { id = item.MaCD })" class="btn btn-danger" role="button">Xóa</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </section>
+</div>
+

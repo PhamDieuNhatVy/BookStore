@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoAnPTTKHDT", "DoAnPTTKHDT\DoAnPTTKHDT.csproj", "{D391DE80-7668-4772-A7C3-5DD4BFE8DD27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D391DE80-7668-4772-A7C3-5DD4BFE8DD27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D391DE80-7668-4772-A7C3-5DD4BFE8DD27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D391DE80-7668-4772-A7C3-5DD4BFE8DD27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D391DE80-7668-4772-A7C3-5DD4BFE8DD27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {95967EBA-3C55-4887-8B82-9EB476E6B292}
+	EndGlobalSection
+EndGlobal

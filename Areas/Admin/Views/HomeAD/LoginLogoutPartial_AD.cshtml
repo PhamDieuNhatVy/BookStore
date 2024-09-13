@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "LoginLogoutPartial";
+    Layout = null;
+}
+
+
+@using DoAnPTTKHDT.Models
+@{
+    ADMIN kh = (ADMIN)Session["Admin"];
+
+
+}
+
+@if (Session["Admin"] == null)
+//Giao diện Login
+{
+
+
+    <a href="~/Admin/HomeAD/Login">
+        <span class="glyphicon glyphicon-log-in"></span> Đăng nhập
+    </a>
+
+}
+else
+{
+    <a>
+        <span class="glyphicon glyphicon-user"></span>
+        @kh.HoTenAdmin
+    </a>
+
+
+
+
+
+}
+
+

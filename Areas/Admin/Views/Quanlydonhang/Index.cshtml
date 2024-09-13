@@ -1,0 +1,65 @@
+﻿@model IEnumerable<DoAnPTTKHDT.Models.DONDATHANG>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container">
+            <h2 style="text-align:center;">QUẢN LÝ THÔNG TIN ĐƠN HÀNG</h2>
+            <table class="table">
+                <tr>
+                    <th>Ngày đặt hàng</th>
+                    <th>Tổng giá</th>
+                    <th>Ngày giao hàng</th>
+                    <th>Tên khách hàng</th>
+                    <th>Địa chỉ</th>
+                    <th>Số điện thoại</th>
+                    <th>Trạng thái</th>
+                    <th>Họ và tên </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NgayDH)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TriGia)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NgayGiaoHang)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TenNguoiNhan)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DiaChiNhan)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DienThoaiNhan)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.daduyet)
+                        </td>
+                     
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NGUOIDUNG.HoTenKH)
+                        </td>
+                        <td>
+
+                            <a href="~/Admin/CTDATHANG/Index/?id=@item.SoDH" class="btn btn-success" role="button">Chi tiết</a>
+
+                        </td>
+                    </tr>
+                }
+
+            </table>
+</div>
+</section>
+</div>
